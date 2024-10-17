@@ -8,10 +8,10 @@ public class PkmnApplication {
         CardImport imp = new CardImport();
         Card card = imp.importCards("src\\main\\resources\\my_card.txt");
 
-//        CardExport exp = new CardExport();
-//        exp.exportCard(card);
-//
-        card = imp.importCardByte("card_for_export_polina.crd");
+        CardExport exp = new CardExport();
+        exp.exportCard(card);
+
+        card = imp.importCardByte("Magmortar.crd");
         System.out.printf(card.toString());
     }
 }

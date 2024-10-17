@@ -9,7 +9,7 @@ public class Card implements Serializable {
 
     @Override
     public String toString() {
-        String sol =  "\n" + pokemonStage + ": \n"+
+        String sol =  "\n" + name + ": \n"+
                 "   1. " + pokemonStage + '\n'+
                 "   2. " + name + '\n' +
                 "   3. " + hp + '\n'  +

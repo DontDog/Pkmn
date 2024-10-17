@@ -3,8 +3,11 @@ package ru.mirea.pkmn;
 import java.io.Serializable;
 
 public class Student  implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String firstName;
     private String surName;
+    private String familyName;
+    private String group;
 
     public String getFirstName() {
         return firstName;
@@ -27,9 +30,7 @@ public class Student  implements Serializable {
         return firstName + " / " + surName + " / " + familyName + " / " + group;
     }
 
-    private static final long serialVersionUID = 1L;
-    private String familyName;
-    private String group;
+
 
     public Student(String firstName, String surName, String familyName, String group) {
         this.firstName = firstName;
