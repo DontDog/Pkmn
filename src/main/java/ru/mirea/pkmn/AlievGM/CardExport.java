@@ -1,4 +1,6 @@
-package ru.mirea.AlievGM.pkmn;
+package ru.mirea.pkmn.AlievGM;
+
+import ru.mirea.pkmn.Card;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

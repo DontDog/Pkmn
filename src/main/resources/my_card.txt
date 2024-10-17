@@ -2,7 +2,7 @@
 2. Magmortar
 3. 140
 4. FIRE
-5. Magmar
+5. src\main\resources\Magmar.txt
 6. 2 / Mega Punch / 50, 1II / Boltsplosin / 120
 7. WATER
 8. -

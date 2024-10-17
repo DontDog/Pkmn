@@ -1,7 +1,6 @@
-package ru.mirea.AlievGM.pkmn;
+package ru.mirea.pkmn;
 
 import java.io.Serializable;
-import java.util.Arrays;
 import java.util.List;
 
 public class Card implements Serializable {
@@ -10,18 +9,25 @@ public class Card implements Serializable {
 
     @Override
     public String toString() {
-        return  "1. " + pokemonStage + '\n'+
-                "2. " + name + '\n' +
-                "3. " + hp + '\n'  +
-                "4. " + pokemonType + '\n'  +
-                "5. " + ((evolvesFrom.getName() != null) ? evolvesFrom.getName() : "-") + '\n'  +
-                "6. " + skills.stream().map(AttackSkill::toString).reduce((a, b) -> a + ", " + b).orElse("") + '\n'  +
-                "7. " + weaknessType + '\n'  +
-                "8. " + ((resistanceType != null) ? resistanceType : "-") + '\n'  +
-                "9. " + retreatCost + '\n' +
-                "10. " + gameSet + '\n' +
-                "11. " + regulationMark + '\n'  +
-                "12. " + pokemonOwner;
+        String sol =  "\n" + pokemonStage + ": \n"+
+                "   1. " + pokemonStage + '\n'+
+                "   2. " + name + '\n' +
+                "   3. " + hp + '\n'  +
+                "   4. " + pokemonType + '\n'  +
+                "   5. " + (evolvesFrom != null ? evolvesFrom.getName() : '-') + '\n'  +
+                "   6. " + (skills != null ? skills.stream().map(AttackSkill::toString).reduce((a, b) -> a + ", " + b).orElse("") : '-') + '\n'  +
+                "   7. " + weaknessType + '\n'  +
+                "   8. " + ((resistanceType != null) ? resistanceType : "-") + '\n'  +
+                "   9. " + retreatCost + '\n' +
+                "   10. " + gameSet + '\n' +
+                "   11. " + regulationMark + '\n'  +
+                "   12. " + pokemonOwner;
+        if (evolvesFrom != null){
+            return evolvesFrom.toString() + sol;
+        }
+        else {
+            return sol;
+        }
     }
 
     public Card(String name) {

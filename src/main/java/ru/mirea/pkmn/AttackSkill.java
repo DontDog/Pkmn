@@ -1,4 +1,4 @@
-package ru.mirea.AlievGM.pkmn;
+package ru.mirea.pkmn;
 
 import java.io.Serializable;
 

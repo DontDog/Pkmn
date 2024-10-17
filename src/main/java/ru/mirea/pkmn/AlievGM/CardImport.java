@@ -1,8 +1,9 @@
-package ru.mirea.AlievGM.pkmn;
+package ru.mirea.pkmn.AlievGM;
+
+import ru.mirea.pkmn.*;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CardImport {
@@ -17,7 +18,7 @@ public class CardImport {
             card.setPokemonType(EnergyType.valueOf(br.readLine().split("\\. ")[1]));
             String line5 = br.readLine().split("\\. ")[1];
             if (!line5.equals("-")){
-                card.setEvolvesFrom(new Card(line5));
+                card.setEvolvesFrom(importCards(line5));
             }
             String[] line6 = br.readLine().split("\\. ")[1].split(", ");
             List<AttackSkill> skills = new ArrayList<>();
@@ -37,11 +38,14 @@ public class CardImport {
             String line10 = br.readLine().split("\\. ")[1];
             card.setGameSet(line10);
             card.setRegulationMark(br.readLine().split("\\. ")[1].charAt(0));
-            String line12 = br.readLine().split("\\. ")[1];
+            String line12 = br.readLine();
+            if(line12.split("\\. ").length > 1) {
+                line12 = line12.split("\\. ")[1];
+                String[] nameStudent = line12.split(" / ");
 
-            String[] nameStudent = line12.split(" / ");
-            card.setPokemonOwner(new Student(nameStudent[0],
-                    nameStudent[1], nameStudent[2], nameStudent[3]));
+                card.setPokemonOwner(new Student(nameStudent[0],
+                        nameStudent[1], nameStudent[2], nameStudent[3]));
+            }
 
         } catch (IOException e) {
             System.err.println("Error while importing card: " + e.getMessage());
