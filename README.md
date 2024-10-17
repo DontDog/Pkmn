@@ -16,25 +16,35 @@
 
 1. **Клонируйте репозиторий**
    ```bash
-   git clone https://github.com/ваш_пользователь/PokemonCardReader.git
+   git clone https://github.com/DontDog/Pkmn.git
    ```
 
 2. **Перейдите в директорию проекта**
    ```bash
-   cd PokemonCardReader
+   cd Pkmn
    ```
 
 3. **Запустите программу**
    Убедитесь, что у вас установлен JDK (Java Development Kit). Затем компилируйте и запускайте проект:
    ```bash
-   javac Main.java
-   java Main
+   javac AlievGM/PkmnApplication.java
+   java PkmnApplication
    ```
 
 4. **Сформируйте текстовый файл** с карточками покемонов в следующем формате:
    ```
-   Pikachu, Electric, 55, 40, 35
-   Bulbasaur, Grass/Poison, 49, 49, 45
+   1. STAGE1
+   2. Magmortar
+   3. 140
+   4. FIRE
+   5. src\main\resources\Magmar.txt
+   6. 2 / Mega Punch / 50, 1II / Boltsplosin / 120
+   7. WATER
+   8. -
+   9. 3
+   10. Brilliant Stars
+   11. F
+   12. Алиев / Глеб / Маратович / БСБО-05-23
    ```
 
 5. **Откройте результаты**:
@@ -43,7 +53,7 @@
 ## Пример работы
 
 1. При запуске программы считываются карточки покемонов из указанного текстового файла.
-2. Данные записываются в бинарный файл (`pokemons.dat`).
+2. Данные записываются в бинарный файл (`name_pokemons.crd`).
 3. Пользователь может выбрать опцию для чтения данных из бинарного файла, и программа отобразит информацию о покемонах.
 
 ## Требования
