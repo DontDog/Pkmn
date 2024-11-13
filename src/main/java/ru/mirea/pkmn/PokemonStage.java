@@ -7,7 +7,7 @@ public enum PokemonStage {
     VSTAR("VSTAR"),
     VMAX("VMAX");
 
-    private String stage;
+    private final String stage;
 
     PokemonStage(String stage) {
         this.stage = stage;

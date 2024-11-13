@@ -13,7 +13,7 @@ public enum EnergyType {
     DRAGON("DRAGON"),
     COLORLESS("COLORLESS");
 
-    private String type;
+    private final String type;
 
     EnergyType(String type) {
         this.type = type;
