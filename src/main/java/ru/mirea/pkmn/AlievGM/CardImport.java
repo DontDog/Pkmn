@@ -81,8 +81,8 @@ public class CardImport {
                 card.setGameSet(parts.length == 2 &&
                         !parts[1].isEmpty() &&
                         !parts[1].equals("-")
-                        ? null
-                        : String.join(" ", Arrays.copyOfRange(parts, 1, parts.length)));
+                        ? parts[1]
+                        : null);
                 break;
 
             case "11":
@@ -91,7 +91,7 @@ public class CardImport {
 
             case "12":
                 if (parts.length == 2) {
-                    String[] ownerInfo = parts[1].split("/");
+                    String[] ownerInfo = parts[1].split(" / ");
                     card.setPokemonOwner(ownerInfo.length == 4 ?
                             new Student(ownerInfo[1], ownerInfo[0], ownerInfo[2], ownerInfo[3]) : null);
 

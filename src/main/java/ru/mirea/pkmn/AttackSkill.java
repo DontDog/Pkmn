@@ -18,7 +18,7 @@ public class AttackSkill  implements Serializable {
 
     @Override
     public String toString() {
-        return cost + " / " + name + " / " + damage;
+        return cost + " / " + name + " / " + damage + (!description.isEmpty() ? " / " + description:"");
     }
 
     public String getName() {
